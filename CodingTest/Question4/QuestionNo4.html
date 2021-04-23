@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            var y = document.forms["myForm"]['checkme'].checked;
+            console.log(y)
+            if (x == "" && !y) {
+                alert("Name must be filled out and checkbox must be checked");
+                return false;
+            } else if (!y) {
+                alert("Checkbox must be checked");
+            } else if (x == "") {
+                alert("Name must be filled out");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2> VADLIDATION FORM</h2>
+    <form name="myForm" onsubmit="validateForm()">
+        <input type="text" name="fname" />
+        <input type="checkbox" name="checkme" />
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html> 
