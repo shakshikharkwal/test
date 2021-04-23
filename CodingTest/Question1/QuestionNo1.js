@@ -7,6 +7,6 @@ function findEvenNumbers(array) {
     if (i % 2 === 0) {
       arr.push(array[i]);
     }
-    return arr;
   }
+  return arr;
 }
